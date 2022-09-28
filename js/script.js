@@ -9,7 +9,8 @@ let closeFav=document.querySelector('.close-fav');
 let cartIcon=document.querySelector('.cartIcon');
 let cartbar=document.querySelector('.cart')
 let closeCart=document.querySelector('.close-cart');
-
+let allFiltersLinks=document.querySelectorAll('.filters li');
+let allCards=document.querySelectorAll('.content-cards .card');
 
 bars.forEach((e)=>{
     e.addEventListener('click',()=>{
@@ -76,6 +77,15 @@ closeFav.addEventListener('click',()=>{
 })
 
 
+allFiltersLinks.forEach((filter)=>{
+    filter.addEventListener('click',()=>{
+        allFiltersLinks.forEach((e)=>e.classList.remove('active'));
+        filter.classList.add('active');
+        let cardVisible=document.querySelectorAll(`.content-cards ${filter.getAttribute('data-category')}`);
+        allCards.forEach((e)=>e.style.display='none');
+        cardVisible.forEach((e)=>e.style.display='block');
+    })
+})
 
 
 // Swiper Trusted Partners
@@ -123,7 +133,6 @@ var swiper2 = new Swiper(".content-clients ", {
 
 //Btn Up
 let up=document.querySelector('.up');
-
 window.onscroll=()=>{
     if(window.scrollY>600){
         up.classList.add('active')

@@ -183,10 +183,12 @@ header .container .content-header {
 header .container .content-header .logo a {
   color: var(--gunmetal-2);
   font-family: var(--ff-playfair-display);
+  text-transform: capitalize;
   font-size: 30px;
 }
 header .container .content-header .logo a span {
   color: var(--emerald);
+  font-family: var(--ff-playfair-display);
 }
 
 header .container .content-header nav {
