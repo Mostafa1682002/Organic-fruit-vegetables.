@@ -82,14 +82,15 @@ section {
   color: var(--white);
   font-size: 18px;
   cursor: pointer;
-  margin: 15px 0;
   text-transform: capitalize;
   transition: var(--transition);
 }
 .btn {
+  margin: 15px 0;
   border-radius: 5px;
 }
 .btn-raduis {
+  /* margin: 15px auto; */
   border-radius: 20px;
   padding: 13px 25px;
   width: fit-content;
@@ -110,15 +111,23 @@ section {
   padding-bottom: 30px;
 }
 .section-title .title {
-  font-size: 20px;
+  font-size: 25px;
   color: var(--emerald);
   text-transform: capitalize;
   font-family: var(--ff-playfair-display);
   padding-bottom: 10px;
 }
 .section-title .dis {
-  font-size: 35px;
+  font-size: 40px;
   color: var(--russian-violet);
+}
+@media (max-width: 768px) {
+  .section-title .title {
+    font-size: 20px;
+  }
+  .section-title .dis {
+    font-size: 30px;
+  }
 }
 /*Meduia Query*/
 .container {
@@ -441,6 +450,7 @@ header .cart-fav .foot-cart .price span {
 
 /* Start Landing Section  */
 .landing {
+  padding-top: 20px;
   height: calc(100vh - 110px);
   background: none;
   background-image: url("../images/hero-left-bg.png"),
@@ -481,6 +491,9 @@ header .cart-fav .foot-cart .price span {
   width: 100%;
 }
 @media (max-width: 768px) {
+  .landing {
+    padding-top: 70px;
+  }
   .landing .container .content-landing .box-lan.imgs {
     display: none;
   }
@@ -597,7 +610,7 @@ header .cart-fav .foot-cart .price span {
     text-align: center;
   }
   .offer .container .content-offer .box-off .btn-raduis {
-    margin: 10px auto;
+    margin: 15px auto;
   }
 }
 /* End Offer Section  */
@@ -607,7 +620,7 @@ header .cart-fav .foot-cart .price span {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 15px;
   align-items: center;
-  padding-bottom: 30px;
+  padding-bottom: 45px;
 }
 .organic-products .container .content-org-pro li {
   height: 60px;
@@ -650,7 +663,7 @@ header .cart-fav .foot-cart .price span {
 .content-org-pro .content-cards .card {
   padding: 20px 10px;
   background-color: var(--mint-cream);
-  border-radius: 5px;
+  border-radius: 10px;
   text-align: center;
   transition: var(--transition);
 }
@@ -700,7 +713,7 @@ header .cart-fav .foot-cart .price span {
   padding: 10px 0;
 }
 .content-cards .card h3 a {
-  font-size: 23px;
+  font-size: 21px;
   color: var(--gunmetal-2);
   transition: var(--transition);
   font-weight: 400;
@@ -708,15 +721,14 @@ header .cart-fav .foot-cart .price span {
 .content-cards .card h3 a:hover {
   color: var(--emerald);
 }
-.content-cards .card .pri {
-  font-size: 18px;
-}
 .content-cards .card .pri del {
   text-decoration: line-through;
   color: var(--battleship-gray);
   padding-right: 5px;
+  font-size: 16px;
 }
 .content-cards .card .pri span {
+  font-size: 18px;
   color: var(--emerald);
 }
 .content-org-pro .content-cards .card button {
@@ -724,3 +736,127 @@ header .cart-fav .foot-cart .price span {
   font-size: 14px !important;
 }
 /* End Organic Products  */
+/* Start Summer offer */
+.summer-offer {
+  background-image: url("../images/cta-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.summer-offer .container .sum-txt {
+  text-align: center;
+  color: var(--sonic-silver);
+  font-size: 20px;
+  margin-top: -20px;
+  margin-bottom: 25px;
+}
+.summer-offer .container .btn-raduis {
+  margin: 15px auto;
+}
+.summer-offer .container .btn-raduis i {
+  font-size: 16px;
+  padding-left: 10px;
+}
+/* End Summer offer */
+/* Start Trendy Products  */
+.trendy-products .container .content-tren-prod {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 15px;
+}
+.trendy-products .container .content-tren-prod .box-tren {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 10px;
+  background-color: var(--mint-cream);
+  border-radius: 10px;
+  transition: var(--transition);
+  height: 200px;
+}
+.content-tren-prod .box-tren:hover {
+  outline: 1px solid var(--emerald);
+}
+.content-tren-prod .box-tren .imgs {
+  position: relative;
+}
+.content-tren-prod .box-tren .imgs img {
+  width: 130px;
+}
+.content-tren-prod .box-tren:hover .imgs img {
+  opacity: 0.6;
+}
+
+.content-tren-prod .box-tren .imgs .card-icons {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+}
+.content-tren-prod .box-tren .imgs .card-icons span {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: var(--emerald);
+  color: var(--white);
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.content-tren-prod .box-tren:hover .imgs .card-icons span {
+  opacity: 1;
+}
+
+.content-tren-prod .box-tren .imgs .card-icons span:hover {
+  background-color: var(--gunmetal-2);
+}
+
+.content-tren-prod .box-tren .trn-text {
+  text-align: center;
+  transform: translateY(30px);
+  transition: var(--transition);
+}
+.content-tren-prod .box-tren:hover .trn-text {
+  transform: translateX(0);
+}
+.content-tren-prod .box-tren .starts span {
+  color: #f90;
+  padding-top: 10px;
+}
+.content-tren-prod .box-tren h3 {
+  padding: 10px 0;
+}
+.content-tren-prod .box-tren h3 a {
+  font-size: 21px;
+  color: var(--gunmetal-2);
+  transition: var(--transition);
+  font-weight: 400;
+}
+.content-tren-prod .box-tren h3 a:hover {
+  color: var(--emerald);
+}
+.content-tren-prod .box-tren .pri del {
+  text-decoration: line-through;
+  color: var(--battleship-gray);
+  padding-right: 5px;
+  font-size: 16px;
+}
+.content-tren-prod .box-tren .pri span {
+  color: var(--emerald);
+  font-size: 18px;
+}
+.content-tren-prod .box-tren .trn-text button {
+  opacity: 0;
+  font-size: 14px !important;
+  margin: 10px auto;
+}
+.content-tren-prod .box-tren:hover .trn-text button {
+  opacity: 1;
+}
+/* End Trendy Products  */
