@@ -99,6 +99,10 @@ section {
 .btn-raduis:hover {
   background-color: var(--green-pigment);
 }
+.btn-raduis i {
+  font-size: 16px;
+  padding-left: 10px;
+}
 @media (max-width: 768px) {
   .btn,
   .btn-raduis {
@@ -753,10 +757,7 @@ header .cart-fav .foot-cart .price span {
 .summer-offer .container .btn-raduis {
   margin: 15px auto;
 }
-.summer-offer .container .btn-raduis i {
-  font-size: 16px;
-  padding-left: 10px;
-}
+
 /* End Summer offer */
 /* Start Trendy Products  */
 .trendy-products .container .content-tren-prod {
@@ -974,3 +975,41 @@ header .cart-fav .foot-cart .price span {
   }
 }
 /* End Blogs   */
+/* Start Newsletter */
+.newsletter {
+  background-image: url("../images/partner-left-bg.png"),
+    url("../images/partner-right-bg.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, right top;
+  background-color: var(--gunmetal-2);
+  margin-bottom: 30px;
+}
+.newsletter .container .section-title .dis {
+  color: var(--white);
+}
+.newsletter .container .section-title .dis span {
+  color: var(--emerald);
+}
+.newsletter .container .content-news {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.newsletter .container .content-news form {
+  display: flex;
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 10px;
+  width: 500px;
+  min-width: 300px;
+}
+.newsletter .container .content-news form input {
+  width: 100%;
+  font-size: 18px;
+  padding: 15px 20px;
+}
+.newsletter .container .content-news form button {
+  white-space: nowrap;
+}
+/* End Newsletter */
