@@ -143,3 +143,25 @@ window.onscroll=()=>{
 up.addEventListener('click',()=>{
     window.scrollTo(0,0)
 })
+
+let year=document.querySelector('.year').innerHTML=new Date().getFullYear();
+
+
+// Products Details Section 
+let curentImg=document.querySelector('.imgs-big img');
+let allImgs=document.querySelectorAll('.imgs-small img');
+let allWeight=document.querySelectorAll('.weight >span')
+
+
+allImgs.forEach((img)=>{
+    img.addEventListener('click',()=>{
+        curentImg.src=img.src;
+    })
+})
+
+allWeight.forEach((e)=>{
+    e.addEventListener('click',()=>{
+        allWeight.forEach(x=>x.classList.remove('active'))
+        e.classList.add('active')
+    })
+})
